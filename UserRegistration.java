@@ -24,6 +24,12 @@ public class UserRegistration {
         String email = sc.next();
         //calling checkemail method
         checkEmail(email);
+
+        //input mobile number
+        System.out.println("Enter mobile number");
+        String mobileNumber = sc.next();
+        //calling checkMobileNumber method
+        checkMobileNumber(mobileNumber);
     }
 
     /*
@@ -68,6 +74,21 @@ public class UserRegistration {
         }
         else{
             System.out.println(email + " " + "is not valid email");
+        }
+    }
+
+    /*
+     *Entered pattern for mobile number
+     * Check mobile number is valid or not
+     */
+    public static void checkMobileNumber(String mobileNumber){
+        boolean isMobileNumber = mobileNumber.matches("^(91)?\\s{0,2}[0-9]{10}$");
+
+        if(isMobileNumber){
+            System.out.println(mobileNumber + " " + "is valid mobile number");
+        }
+        else{
+            System.out.println(mobileNumber + " " + "is not valid mobile number");
         }
     }
 }
