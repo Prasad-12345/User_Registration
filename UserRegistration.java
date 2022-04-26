@@ -30,6 +30,12 @@ public class UserRegistration {
         String mobileNumber = sc.next();
         //calling checkMobileNumber method
         checkMobileNumber(mobileNumber);
+
+        //input password
+        System.out.println("Enter password");
+        String password = sc.next();
+        //calling checkPassword method
+        checkPassword(password);
     }
 
     /*
@@ -89,6 +95,21 @@ public class UserRegistration {
         }
         else{
             System.out.println(mobileNumber + " " + "is not valid mobile number");
+        }
+    }
+
+    /*
+     *Entered pattern for password
+     * check password is valid or not
+     */
+    public static void checkPassword(String password){
+        boolean isPassword = password.matches("[a-zA-Z0-9!@#$%&.]{8,}$");
+
+        if(isPassword){
+            System.out.println(password + " " + "is valid password");
+        }
+        else{
+            System.out.println(password + " " + "is not valid password");
         }
     }
 }
