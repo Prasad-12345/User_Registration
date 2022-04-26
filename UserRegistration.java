@@ -13,6 +13,12 @@ public class UserRegistration {
         String firstName = sc.next();
         //calling checkFirstName method
         checkFirstName(firstName);
+
+        //input last name
+        System.out.println("Enter last name");
+        String lastName = sc.next();
+        //calling check last name method
+        checkLastName(lastName);
     }
 
     /*
@@ -23,10 +29,25 @@ public class UserRegistration {
         boolean isFirstName = firstName.matches("^[A-Z]{1}[a-z]{2,}$");
 
         if(isFirstName){
-            System.out.println(firstName + " " + "is valid");
+            System.out.println(firstName + " " + "is valid first name");
         }
         else{
-            System.out.println("User registration is not valid");
+            System.out.println(firstName + " " + "is not valid first name");
+        }
+    }
+
+    /*
+     *Entered pattern for last name
+     * And Check last name is valid or not
+     */
+    public static void checkLastName(String lastName){
+        boolean isLastName = lastName.matches("^[A-Z]{1}[a-z]{2,}$");
+
+        if(isLastName){
+            System.out.println(lastName + " " + "is valid last name");
+        }
+        else{
+            System.out.println(lastName + " " + "is not valid last name");
         }
     }
 }
