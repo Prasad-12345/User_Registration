@@ -103,7 +103,7 @@ public class UserRegistration {
      * check password is valid or not
      */
     public static void checkPassword(String password){
-        boolean isPassword = password.matches("^(?=.*[A-Z])(?=.*[0-9])[a-zA-Z0-9!@#$%&.]{8,}$");
+        boolean isPassword = password.matches("^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%&*()])[a-zA-Z0-9!@#$%&.]{8,}$");
 
         if(isPassword){
             System.out.println(password + " " + "is valid password");
