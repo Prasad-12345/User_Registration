@@ -3,7 +3,6 @@ package com.bridgelabz.regex;
 import java.util.Scanner;
 /*
  *Author: Prasad
- *As a user need to enter valid first name
  */
 public class UserRegistration {
     public static void main(String[] args) {
@@ -19,6 +18,12 @@ public class UserRegistration {
         String lastName = sc.next();
         //calling check last name method
         checkLastName(lastName);
+
+        //input email
+        System.out.println("Enter email");
+        String email = sc.next();
+        //calling checkemail method
+        checkEmail(email);
     }
 
     /*
@@ -48,6 +53,21 @@ public class UserRegistration {
         }
         else{
             System.out.println(lastName + " " + "is not valid last name");
+        }
+    }
+
+    /*
+     *Entered pattern for email
+     * Check email is valid or not
+     */
+    public static void checkEmail(String email){
+        boolean isEmail = email.matches("^[a-zA-z]+[.][a-zA-Z0-9]*@[a-z]{2}[.][a-z]{2}[.][a-z]*");
+
+        if(isEmail){
+            System.out.println(email + " " + "is valid email");
+        }
+        else{
+            System.out.println(email + " " + "is not valid email");
         }
     }
 }
